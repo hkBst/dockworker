@@ -7,7 +7,7 @@ fn main() {
     let docker = Docker::connect_with_defaults().unwrap();
     for network in docker.list_networks(ListNetworkFilters::default()).unwrap() {
         println!(
-            "{:20.12}{:25.}{:10.}{:8.}",
+            "{:20.12}{:25}{:10}{:8}",
             network.Id, network.Name, network.Driver, network.Scope
         );
     }
